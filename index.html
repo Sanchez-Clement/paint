@@ -15,12 +15,35 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
     <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+      <h1>paint</h1>
+      <div id="brosse">
+        <ul id="color">
+          <li data-color="#40A44A"></li>
+          <li data-color='#000000'></li>
+          <li data-color='#ff0000'></li>
+          <li data-color='#ffffff'>gomme</li>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        </ul>
+<section id="forme">
+
+
+    <button type="button" name="button" onclick="formeBrosse('square')">carre</button>
+    <button type="button" name="button"onclick="formeBrosse('round')">rond</button>
+    </section>
+    <section id="epaisseur">
+
+
+    <input type="range" value="15" max="50" min="0" step="5" id="largeurBrosse">
+    </section>
+      </div>
+
+
+
+      <canvas id="canvas" width="300" height="300"></canvas>
+<button type="button" name="button" onclick="clear_canvas()">reset</button>
+<!--
+<input type="range" min="2" max="50" value="5" id="largeurs_pinceau" />
+<button type="button" name="button" id="reset"></button> -->
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
