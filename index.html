@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
+        <title>Paint</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -19,34 +19,29 @@
       <div id="brosse">
         <section id="couleur">
 
-
-        <!-- <ul id="color">
-          <li data-color="#40A44A"></li>
-          <li data-color='#000000'></li>
-          <li data-color='#ff0000'></li>
-          <li data-color='#ffffff'>gomme</li>
-
-        </ul> -->
+<label for="textcolor">Couleur :</label>
         <input type="color" value="#fad345" name="textcolor" id="color">
-        <button type="button" name="button">Valider couleur</button>
+
           </section>
 <section id="forme">
-
+<p>Forme de la brosse :</p>
 
     <button type="button" name="button" onclick="formeBrosse('square')">carre</button>
     <button type="button" name="button"onclick="formeBrosse('round')">rond</button>
     </section>
     <section id="epaisseur">
 
-
+<label for="">Epaisseur :</label>
+<p>0</p>
     <input type="range" value="15" max="50" min="0" step="5" id="largeurBrosse">
+    <p>50</p>
     </section>
       </div>
 
 
 
-      <canvas id="canvas" width="300" height="300"></canvas>
-<button type="button" name="button" onclick="clear_canvas()">reset</button>
+      <canvas id="canvas" width="350" height="350"></canvas>
+<button type="button" name="button" onclick="clear_canvas()" id="reset">reset</button>
 <!--
 <input type="range" min="2" max="50" value="5" id="largeurs_pinceau" />
 <button type="button" name="button" id="reset"></button> -->

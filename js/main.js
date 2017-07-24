@@ -12,62 +12,16 @@ var color;
 ctx.lineCap = "square";
 
 
-
-// console.log(ctx.lineWidth);
-
-
-
-// color = $('#color').val();
-// console.log(color);
-
-// $("#couleur button").click(function() {
-// ctx.strokeStyle = $('#color').val();
-// console.log(ctx.strokeStyle);
-// });
-
-// $("#color li").css('background', function () {
-//     return $(this).data('color')});
-//
-// $("#color li").click(function() {
-//
-//   ctx.strokeStyle = $(this).data('color');
-//   console.log($(this).data('color'));
-// });
-
-
 function clear_canvas() {
   ctx.clearRect(0,0, $("#canvas").width(), $("#canvas").height());
 }
-// ctx.lineJoin = 'round';
+
+
+
 function formeBrosse(forme) {
 ctx.lineCap = forme;
 ctx.lineJoin= forme;}
 
-
-
-$("#canvas").mousedown(function(event){
-  ctx.strokeStyle = $('#color').val();
-  counter = 0;
-ctx.lineWidth = $("#largeurBrosse").val();
-  departX=event.pageX - elemLeft;
-  departY=event.pageY - elemTop;
-  ctx.beginPath();
-  ctx.moveTo(departX, departY);
-// console.log(departX);
-// console.log(departY);
-
-// counter ++;
-// if (counter > 0 && counter < 2) {
-dessine();
-// $("#canvas").mouseup(function(){
-//
-// counter=0;
-// console.log(counter);
-//
-// });
-
-
-});
 
 function dessine () {
   // counter++;
@@ -80,44 +34,36 @@ function dessine () {
     arriveeX=event.pageX - elemLeft;
     arriveeY=event.pageY - elemTop;
     ctx.lineTo(arriveeX, arriveeY);
-    // context.strokeStyle = color;
+
 
     ctx.stroke();
-    // console.log(arriveeX);
-    // console.log(arriveeY);
 
-      // $("span").text("X: " + event.pageX + ", Y: " + event.pageY);
     }
     });
     $("#canvas").mouseup(function(){
 
 counter++;
-// console.log(counter);
+
 });
 
 $("#canvas").mouseout(function(){
 
 counter++;
-// console.log(counter);
+
 });
 }
 
 
 
 
+$("#canvas").mousedown(function(event){
+  ctx.strokeStyle = $('#color').val();
+  counter = 0;
+ctx.lineWidth = $("#largeurBrosse").val();
+  departX=event.pageX - elemLeft;
+  departY=event.pageY - elemTop;
+  ctx.beginPath();
+  ctx.moveTo(departX, departY);
+dessine();
 
-// function trait() {
-//
-// ctx.moveTo(departX,departY);
-// ctx.lineTo(arriveeX,arriveeY);
-// ctx.stroke();}
-//
-// function dessine() {
-//   context.beginPath();
-//   context.moveTo(de, cursorY);
-
-
-
-
-
-// $("#canvas").mouseup(trait);
+});

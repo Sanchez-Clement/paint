@@ -1,9 +1,44 @@
+body {
+  background-color: rgb(27,220,219);
+}
+
 #canvas {
   /*background-color: grey;*/
-  border:1px solid #d3d3d3;
+  border:5px solid #d3d3d3;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+}
+
+#couleur {
+  display: flex;
+  justify-content: center;
+}
+
+#forme {
+  display: flex;
+  justify-content: space-around;
+}
+
+#epaisseur {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1 {
+  text-align: center;
 }
 
 #brosse{
   display: flex;
   flex-flow: column nowrap;
+  width: 350px;
+  margin: auto;
+}
+
+#reset {
+  width: 100px;
+  margin: auto;
+  text-align: center;
+  display: block;
 }
