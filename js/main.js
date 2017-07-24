@@ -13,17 +13,17 @@ ctx.lineCap = "square";
 
 
 
-console.log(ctx.lineWidth);
+// console.log(ctx.lineWidth);
 
 
 
-color = $('#color').val();
-console.log(color);
+// color = $('#color').val();
+// console.log(color);
 
-$("#couleur button").click(function() {
-ctx.strokeStyle = $('#color').val();
-console.log(ctx.strokeStyle);
-});
+// $("#couleur button").click(function() {
+// ctx.strokeStyle = $('#color').val();
+// console.log(ctx.strokeStyle);
+// });
 
 // $("#color li").css('background', function () {
 //     return $(this).data('color')});
@@ -46,6 +46,7 @@ ctx.lineJoin= forme;}
 
 
 $("#canvas").mousedown(function(event){
+  ctx.strokeStyle = $('#color').val();
   counter = 0;
 ctx.lineWidth = $("#largeurBrosse").val();
   departX=event.pageX - elemLeft;
