@@ -12,17 +12,33 @@ var color;
 ctx.lineCap = "square";
 
 
+/**
+ * clear_canvas - restart
+ *
+ * @return {type}  no return
+ */
 function clear_canvas() {
   ctx.clearRect(0,0, $("#canvas").width(), $("#canvas").height());
 }
 
 
 
+/**
+ * formeBrosse - to choose the form
+ *
+ * @param  {type} forme square or round
+ * @return {type}       no return
+ */
 function formeBrosse(forme) {
 ctx.lineCap = forme;
 ctx.lineJoin= forme;}
 
 
+/**
+ * dessine - to draw
+ *
+ * @return {type}  description
+ */
 function dessine () {
   // counter++;
   // console.log(counter);
